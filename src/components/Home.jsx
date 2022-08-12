@@ -1,6 +1,7 @@
 import React from "react";
 import mainImage from "../assets/heroImage.png";
 import { BsBoxArrowRight } from "react-icons/bs";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -21,12 +22,17 @@ const Home = () => {
           </p>
           <div>
             {/* We expand the hover effect to happen across the whole button and not just the arrow icon by adding  */}
-            <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
+            <Link
+              to="portfolio"
+              smooth
+              duration={500}
+              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+            >
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
                 <BsBoxArrowRight className="ml-2" />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
         <div>
